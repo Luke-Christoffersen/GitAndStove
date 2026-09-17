@@ -1,4 +1,56 @@
 
 public class Burner {
+	private enum Temperature {
+		BLAZING, HOT, WARM, COLD
+	}
 
+	private Temperature myTemperature;
+	
+	public String getTemperature() {
+		return this.myTemperature.toString();
+	}
+	
+	private Setting mySetting;
+	
+	private int timer;
+	
+	public final static int TIME_DURATION = 2;
+	
+	Burner() {
+		myTemperature = Temperature.COLD;
+		timer = 2;
+	}
+	
+	private void plusButton() {
+		
+	}
+	
+	private void minusButton() {
+		
+	}
+	
+	private void updateTemperature() {
+		
+	}
+	
+	void display() {
+		String printMessage = "";
+		switch (myTemperature) {
+		case COLD:
+			printMessage = "cooool";
+			break;
+		case WARM:
+			printMessage = "warm";
+			break;
+		case HOT:
+			printMessage = "CAREFUL";
+			break;
+		case BLAZING:
+			printMessage = "VERY HOT! DON'T TOUCH";
+			break;
+		}
+		
+		System.out.println(this.myTemperature + "....." + printMessage);
+	}
+	
 }
