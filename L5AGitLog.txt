@@ -1,0 +1,101 @@
+commit 025db077b2fd15756059b29f17da08455820591f
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Fri Sep 18 12:38:39 2026 -0600
+
+    Added readme.txt for submission purposes
+
+commit 9931c37df96a0c9785f2d79f7f7e900632179d64
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Fri Sep 18 12:35:00 2026 -0600
+
+    Final changes and bug fixes
+
+commit 86bf69a979ada0ef79c9766bdff3fa7f0b37b819
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Fri Sep 18 10:50:37 2026 -0600
+
+    Comments for clarity
+
+commit ab56d726649726a7be952cc326ba17e2cdf30e48
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Fri Sep 18 10:47:33 2026 -0600
+
+    Added updateTemperature functionality
+
+commit c10f70b713d500e023bcece6ef72281e3097f1e2
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Fri Sep 18 10:07:11 2026 -0600
+
+    Added timer reset logic in minusButton and plusButton
+
+commit 4c6189e006c2313e319df7105e1c0c18287fbb57
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Fri Sep 18 09:57:53 2026 -0600
+
+    Changed the setting assignment in the constructor
+
+commit a1a95502c28c9e25646be94a000c2c3d24d25e8f
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 17 21:41:39 2026 -0600
+
+    Changed minusButton to use a sitch statement
+
+commit ffcb3d396530531b69bc2940c09c221fb8f5fe8e
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 17 21:39:36 2026 -0600
+
+    Changed plusButton to use a switch statement
+
+commit c72e6aae2cee5b9c05bd395b21f36f3d0e6ffaac
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 17 21:35:10 2026 -0600
+
+    Added comments for readability and added missing return statements for plus and minus button
+
+commit fc8f26742650682f96b4e19fc1071280d76f1062
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 17 21:31:21 2026 -0600
+
+    Added minusButton functionality
+
+commit 03d18c24a45f476aaca34cf302855db88dfd19c9
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 17 21:25:11 2026 -0600
+
+    Added mySetting declaration to burner constructor
+
+commit 9b728420257533a996a355a5ab6ac202471b3b32
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 17 21:20:30 2026 -0600
+
+    Added plusButton() functionality
+
+commit 05832cb85ec8892bd615b7a27f93813c9d89ac35
+Author: Aidan Schiefer <aidanschiefer@gmail.com>
+Date:   Thu Sep 17 21:09:11 2026 -0600
+
+    Changing Burner method visibility to public instead of private
+
+commit 13834415d565c7d7952125479464c093bde5de3b
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Wed Sep 16 21:19:01 2026 -0600
+
+    feat: added burner variables, constructor, and display method as well a empty methods, made displayStove method in Stove
+
+commit b6e39dc17b395669f760a4439ad3b2cc38b41629
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Tue Sep 15 15:48:59 2026 -0600
+
+    feat: added Setting enum file, should be complete
+
+commit bf778b0914d07907f9b87b67ebc707754890058c
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Tue Sep 15 11:10:36 2026 -0600
+
+    feat: added default Stove file and empty Burner class
+
+commit e86d2938bb184e254cf364628333cf1b263c2464
+Author: Your Name <luke_christoffersen@mines.edu>
+Date:   Mon Sep 14 14:15:30 2026 -0600
+
+    Initial commit with gitignore
