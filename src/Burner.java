@@ -18,7 +18,7 @@ public class Burner {
 	
 	Burner() {
 		myTemperature = Temperature.COLD;
-		mySetting = Setting.LOW;
+		mySetting = Setting.OFF;
 		timer = 2;
 	}
 	
