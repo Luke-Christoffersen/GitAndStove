@@ -71,6 +71,7 @@ public class Burner {
 			timer--;
 			if (timer == 0) {
 				Temperature targetTemp;
+				// Set target temp to matching temperature setting
 				switch (mySetting) {
 				case LOW:
 					targetTemp = Temperature.WARM;
