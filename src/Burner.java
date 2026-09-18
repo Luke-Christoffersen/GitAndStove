@@ -5,23 +5,23 @@ public class Burner {
 	}
 
 	private Temperature myTemperature;
-	
+
 	public String getTemperature() {
-		return this.myTemperature.toString();
+		return mySetting.toString();
 	}
-	
+
 	private Setting mySetting;
-	
+
 	private int timer;
-	
+
 	public final static int TIME_DURATION = 2;
-	
+
 	Burner() {
 		myTemperature = Temperature.COLD;
 		mySetting = Setting.OFF;
 		timer = 0;
 	}
-	
+
 	// Plus button function. Increases the current setting by one. Ignores if on highest setting
 	public void plusButton() {
 		switch (mySetting) {
@@ -42,7 +42,7 @@ public class Burner {
 			break;
 		}
 	}
-	
+
 	// Minus button function. Decreases the current setting by one. Ignores if on lowest setting
 	public void minusButton() {
 		switch (mySetting) {
@@ -63,25 +63,29 @@ public class Burner {
 			break;
 		}
 	}
-	
+
 	public void updateTemperature() {
 		// Check if timer is greater than 0
 		if (timer > 0) {
 			// Decrement the timer by 1
 			timer--;
 			if (timer == 0) {
-				Temperature targetTemp;
+				Temperature targetTemp = Temperature.COLD;
 				// Set target temp to matching temperature setting
 				switch (mySetting) {
 				case LOW:
 					targetTemp = Temperature.WARM;
+					break;
 				case MEDIUM:
 					targetTemp = Temperature.HOT;
+					break;
 				case HIGH:
 					targetTemp = Temperature.BLAZING;
-				default:
+					break;
+				case OFF:
 					targetTemp = Temperature.COLD;
-					
+					break;
+				}
 				// Check if the current temperature is not equal to the target temp
 				if (myTemperature != targetTemp) {
 					// enum order is BLAZING(0), HOT(1), WARM(2), and COLD(#)
@@ -94,17 +98,16 @@ public class Burner {
 						// Increase my Temperature's enum value by 1
 						myTemperature = Temperature.values()[myTemperature.ordinal() + 1];
 					}
-					
+
 					// If myTemperature doesn't match the target, reset the timer
 					if (myTemperature != targetTemp) {
 						timer = TIME_DURATION;
 					}
 				}
-				}
 			}
 		}
 	}
-	
+
 	void display() {
 		String printMessage = "";
 		switch (myTemperature) {
@@ -121,8 +124,8 @@ public class Burner {
 			printMessage = "VERY HOT! DON'T TOUCH";
 			break;
 		}
-		
-		System.out.println(this.myTemperature + "....." + printMessage);
+
+		System.out.println(this.mySetting + "....." + printMessage);
 	}
-	
+
 }

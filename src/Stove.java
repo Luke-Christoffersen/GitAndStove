@@ -36,8 +36,8 @@ public class Stove {
 				isHot = true;
 			}
 			burner.display();
-			if (isHot) System.out.println("RED LIGHT - HOT BURNER ALERT");
 		}
+		if (isHot) System.out.println("RED LIGHT - HOT BURNER ALERT");
 	}
 	
 	/**
