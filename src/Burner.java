@@ -24,20 +24,18 @@ public class Burner {
 	
 	// Plus button function. Increases the current setting by one. Ignores if on highest setting
 	public void plusButton() {
-		if (mySetting.equals(Setting.HIGH)) {
-			return;
-		}
-		else if (mySetting.equals(Setting.OFF)) {
+		switch (mySetting) {
+		case HIGH:
+			break;
+		case OFF:
 			mySetting = Setting.LOW;
-			return;
-		}
-		else if (mySetting.equals(Setting.LOW)) {
+			break;
+		case LOW:
 			mySetting = Setting.MEDIUM;
-			return;
-		}
-		else if (mySetting.equals(Setting.MEDIUM)) {
+			break;
+		case MEDIUM:
 			mySetting = Setting.HIGH;
-			return;
+			break;
 		}
 	}
 	
