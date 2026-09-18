@@ -19,7 +19,7 @@ public class Burner {
 	Burner() {
 		myTemperature = Temperature.COLD;
 		mySetting = Setting.OFF;
-		timer = 2;
+		timer = 0;
 	}
 	
 	// Plus button function. Increases the current setting by one. Ignores if on highest setting
@@ -65,7 +65,43 @@ public class Burner {
 	}
 	
 	public void updateTemperature() {
-		
+		// Check if timer is greater than 0
+		if (timer > 0) {
+			// Decrement the timer by 1
+			timer--;
+			if (timer == 0) {
+				Temperature targetTemp;
+				switch (mySetting) {
+				case LOW:
+					targetTemp = Temperature.WARM;
+				case MEDIUM:
+					targetTemp = Temperature.HOT;
+				case HIGH:
+					targetTemp = Temperature.BLAZING;
+				default:
+					targetTemp = Temperature.COLD;
+					
+				// Check if the current temperature is not equal to the target temp
+				if (myTemperature != targetTemp) {
+					// enum order is BLAZING(0), HOT(1), WARM(2), and COLD(#)
+					// Check to see if the value of myTemperature is higher than the target temperature
+					if (myTemperature.ordinal() > targetTemp.ordinal()) {
+						// Decrease myTemperature's enum value by 1
+						myTemperature = Temperature.values()[myTemperature.ordinal() - 1];
+					}
+					else {
+						// Increase my Temperature's enum value by 1
+						myTemperature = Temperature.values()[myTemperature.ordinal() + 1];
+					}
+					
+					// If myTemperature doesn't match the target, reset the timer
+					if (myTemperature != targetTemp) {
+						timer = TIME_DURATION;
+					}
+				}
+				}
+			}
+		}
 	}
 	
 	void display() {
