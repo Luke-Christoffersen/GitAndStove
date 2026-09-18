@@ -21,15 +21,15 @@ public class Burner {
 		timer = 2;
 	}
 	
-	private void plusButton() {
+	public void plusButton() {
 		
 	}
 	
-	private void minusButton() {
+	public void minusButton() {
 		
 	}
 	
-	private void updateTemperature() {
+	public void updateTemperature() {
 		
 	}
 	
