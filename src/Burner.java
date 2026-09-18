@@ -26,15 +26,19 @@ public class Burner {
 	public void plusButton() {
 		switch (mySetting) {
 		case HIGH:
+			timer = TIME_DURATION;
 			break;
 		case OFF:
 			mySetting = Setting.LOW;
+			timer = TIME_DURATION;
 			break;
 		case LOW:
 			mySetting = Setting.MEDIUM;
+			timer = TIME_DURATION;
 			break;
 		case MEDIUM:
 			mySetting = Setting.HIGH;
+			timer = TIME_DURATION;
 			break;
 		}
 	}
@@ -43,15 +47,19 @@ public class Burner {
 	public void minusButton() {
 		switch (mySetting) {
 		case OFF:
+			timer = TIME_DURATION;
 			break;
 		case LOW:
 			mySetting = Setting.OFF;
+			timer = TIME_DURATION;
 			break;
 		case MEDIUM:
 			mySetting = Setting.LOW;
+			timer = TIME_DURATION;
 			break;
 		case HIGH:
 			mySetting = Setting.MEDIUM;
+			timer = TIME_DURATION;
 			break;
 		}
 	}
