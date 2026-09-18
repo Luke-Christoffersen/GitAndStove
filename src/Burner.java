@@ -41,20 +41,18 @@ public class Burner {
 	
 	// Minus button function. Decreases the current setting by one. Ignores if on lowest setting
 	public void minusButton() {
-		if (mySetting.equals(Setting.OFF)) {
-			return;
-		}
-		else if (mySetting.equals(Setting.LOW)) {
+		switch (mySetting) {
+		case OFF:
+			break;
+		case LOW:
 			mySetting = Setting.OFF;
-			return;
-		}
-		else if (mySetting.equals(Setting.MEDIUM)) {
+			break;
+		case MEDIUM:
 			mySetting = Setting.LOW;
-			return;
-		}
-		else if (mySetting.equals(Setting.HIGH)) {
+			break;
+		case HIGH:
 			mySetting = Setting.MEDIUM;
-			return;
+			break;
 		}
 	}
 	
