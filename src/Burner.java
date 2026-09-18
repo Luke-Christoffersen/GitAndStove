@@ -18,6 +18,7 @@ public class Burner {
 	
 	Burner() {
 		myTemperature = Temperature.COLD;
+		mySetting = Setting.LOW;
 		timer = 2;
 	}
 	
@@ -37,7 +38,9 @@ public class Burner {
 	}
 	
 	public void minusButton() {
-		
+		if (mySetting.equals(Setting.LOW)) {
+			return;
+		}
 	}
 	
 	public void updateTemperature() {
