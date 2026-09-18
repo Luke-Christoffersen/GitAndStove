@@ -22,33 +22,41 @@ public class Burner {
 		timer = 2;
 	}
 	
+	// Plus button function. Increases the current setting by one. Ignores if on highest setting
 	public void plusButton() {
 		if (mySetting.equals(Setting.HIGH)) {
 			return;
 		}
 		else if (mySetting.equals(Setting.OFF)) {
 			mySetting = Setting.LOW;
+			return;
 		}
 		else if (mySetting.equals(Setting.LOW)) {
 			mySetting = Setting.MEDIUM;
+			return;
 		}
 		else if (mySetting.equals(Setting.MEDIUM)) {
 			mySetting = Setting.HIGH;
+			return;
 		}
 	}
 	
+	// Minus button function. Decreases the current setting by one. Ignores if on lowest setting
 	public void minusButton() {
 		if (mySetting.equals(Setting.OFF)) {
 			return;
 		}
 		else if (mySetting.equals(Setting.LOW)) {
 			mySetting = Setting.OFF;
+			return;
 		}
 		else if (mySetting.equals(Setting.MEDIUM)) {
 			mySetting = Setting.LOW;
+			return;
 		}
 		else if (mySetting.equals(Setting.HIGH)) {
 			mySetting = Setting.MEDIUM;
+			return;
 		}
 	}
 	
