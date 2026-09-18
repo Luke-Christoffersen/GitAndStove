@@ -38,8 +38,17 @@ public class Burner {
 	}
 	
 	public void minusButton() {
-		if (mySetting.equals(Setting.LOW)) {
+		if (mySetting.equals(Setting.OFF)) {
 			return;
+		}
+		else if (mySetting.equals(Setting.LOW)) {
+			mySetting = Setting.OFF;
+		}
+		else if (mySetting.equals(Setting.MEDIUM)) {
+			mySetting = Setting.LOW;
+		}
+		else if (mySetting.equals(Setting.HIGH)) {
+			mySetting = Setting.MEDIUM;
 		}
 	}
 	
